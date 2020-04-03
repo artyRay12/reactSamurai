@@ -1,0 +1,49 @@
+.new_post_wrapper
+{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.posts
+{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.new_post_text
+{
+    margin: 10px 0;
+    height: 75px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid gainsboro;
+}
+
+.new_post_text:hover
+{
+    border: 2px solid mediumslateblue;
+}
+
+.new_post_btn
+{
+    width: 25%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+    border: 2px solid gainsboro;
+}
+
+.new_post_btn:hover
+{
+    border: 2px solid mediumslateblue;
+    cursor: pointer;
+}
+
+.new_post_btn:active
+{
+    border-color: powderblue;
+    background-color: powderblue;   
+}

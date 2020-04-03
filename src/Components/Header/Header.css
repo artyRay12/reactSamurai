@@ -1,0 +1,6 @@
+.header_wrapper
+{
+    background-color: mediumslateblue;
+    grid-area: h;
+    border-radius: 3px;
+}

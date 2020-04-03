@@ -1,0 +1,33 @@
+
+.dialogs_wrapper
+{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+}
+
+
+.dialog_list
+{
+    list-style: none;
+}
+
+.dialog_list_item
+{
+    margin-bottom: 10px;
+}
+
+.dialog_list_item_link:hover
+{
+    color: deepskyblue;
+}
+
+.dialog_list_item_link
+{
+    text-decoration: none;
+}
+
+.dialog_list_item_link :active
+{
+    color: green;
+}
+

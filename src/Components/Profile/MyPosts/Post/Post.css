@@ -1,0 +1,18 @@
+.posts_item
+{
+    margin: 10px 0;
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+
+.post_text
+{
+    margin-left: 10px;
+}
+.post_avatar
+{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
