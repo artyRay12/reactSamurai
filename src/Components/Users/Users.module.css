@@ -1,0 +1,110 @@
+p{
+    margin: 0;
+}
+
+.user_wrapper
+{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar_sub_wrap
+{
+    display: flex;
+    flex-direction: column;
+    width: 13%;
+}
+
+
+.users_avatar
+{
+    border-radius: 50%;
+    width: 70px;
+}
+
+.sub_button
+{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #444;
+    color: #c1c1c1;
+    margin-top: 5px;
+}
+
+.sub_button:hover
+{
+    cursor: pointer;
+    background-color: #797979
+    ;
+    color: white;
+}
+
+.user_status_location_wrap
+{
+    width: 90%;
+    height: 70px;
+    
+}
+
+.user_status_location_wrap_2
+{
+    border: 2px solid #a9a9a9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 5px;
+}
+
+
+.name_status_wrap
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+
+.location_wrap
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3px 0;
+}
+
+.paginator
+{
+    max-width: 150px;
+    width: 100%;
+    margin: 10px auto;
+    height: 20px;
+}
+
+.paginator_item
+{
+    margin-left: 5px;
+    transition: .3s; 
+    color: #e5e5e5;
+}
+
+.selected
+{
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+}
+
+.paginator_item:hover
+{
+    cursor: pointer;
+}
+
