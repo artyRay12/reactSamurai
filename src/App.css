@@ -1,5 +1,5 @@
 .app_wrapper {
-    max-width: 1280px;
+    max-width: 800px;
     width: 100%;
     margin: 10px auto;;
     display: grid;
@@ -12,10 +12,9 @@
 }
 
 .content_wrapper {
-    background-color: plum;
+    background-color: white;
     border-radius: 3px;
     grid-area: c;
-    padding: 15px;
 }
 
 * {

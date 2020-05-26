@@ -1,12 +1,16 @@
 .nav_wrapper {
-    background-color: aqua;
+    background-color: #444;
     grid-area: n;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 .nav_list {
     list-style: none;
     margin: 40px 0;
+    padding: 0;
+
 }
 
 .nav_list_item {
@@ -16,9 +20,10 @@
 .nav_list_item_link {
     text-decoration: none !important;
     font-size: 18px;
+    color: #BFBFBF;
 }
 
 
 .active {
-    color: mediumslateblue;
+    color: white;
 }

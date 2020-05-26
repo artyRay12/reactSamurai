@@ -1,16 +1,22 @@
 import React from 'react';
 import './Profile';
-import MyPosts from './MyPosts/MyPosts.jsx';
 import './Profile.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
-import Post from './MyPosts/Post/Post';
+import MyPostsContainer from './MyPosts/MyPostsContaiter';
+import Preloader from '../common/preloader/Preloader';
 
-const Profile = props => {
+
+const Profile = (props) => {
     return (
         <div>
             <div className="content_wrapper">
-                <ProfileInfo />
-                <MyPosts postsInfo={props.profileInfo} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>
+                Начать с 63.5 урока!
+                {!props.profileInfo ? (
+                    <Preloader />
+                ) : (
+                    <ProfileInfo profileInfo={props.profileInfo} />
+                )}
+                <MyPostsContainer />
             </div>
         </div>
     );

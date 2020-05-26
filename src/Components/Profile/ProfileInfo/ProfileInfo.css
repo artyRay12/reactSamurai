@@ -1,4 +1,61 @@
 .profileInfo_wrapper
 {
+    display: flex;
     margin-bottom: 30px;
+}
+
+.avatar_wrap
+{
+    border-radius: 5px;
+    width: 36%;
+    height: auto;
+    background-color: #444;
+    padding: 15px;
+}
+
+.avatar
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.info_wrap
+{
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #444;
+    margin-left: 35px;
+}
+
+.user_name
+{
+    font: 400 35px/35px Arial;
+    color: #a7a7a7;
+}
+
+.status
+{
+    color: #a7a7a7;
+
+}
+
+.contact_list
+{
+    margin-top: 35px;
+    list-style: none;
+    padding: 0;
+}
+
+.contact_list_item_icon_link
+{
+    display: inline-block;
+    width: 26px;
+    color: white;
+}
+
+.contact_list_item_link
+{
+    color: #a7a7a7;
 }

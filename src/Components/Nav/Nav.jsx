@@ -26,6 +26,11 @@ const Nav = () => {
                         News
                     </NavLink>
                 </li>
+                <li className="nav_list_item">
+                    <NavLink className="nav_list_item_link" to="/users">
+                        Users
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );

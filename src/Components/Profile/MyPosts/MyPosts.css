@@ -1,18 +1,15 @@
-.new_post_wrapper
-{
+.new_post_wrapper {
     display: flex;
     flex-direction: column;
-    width: 30%;
 }
 
-.posts
-{
+.posts {
+    width: 90%;
     display: flex;
     flex-direction: column-reverse;
 }
 
-.new_post_text
-{
+.new_post_text {
     margin: 10px 0;
     height: 75px;
     width: 300px;
@@ -21,14 +18,12 @@
     border: 2px solid gainsboro;
 }
 
-.new_post_text:hover
-{
+.new_post_text:hover {
     border: 2px solid mediumslateblue;
 }
 
-.new_post_btn
-{
-    width: 25%;
+.new_post_btn {
+    width: 15%;
     height: 40px;
     border-radius: 10px;
     outline: none;
@@ -36,14 +31,12 @@
     border: 2px solid gainsboro;
 }
 
-.new_post_btn:hover
-{
+.new_post_btn:hover {
     border: 2px solid mediumslateblue;
     cursor: pointer;
 }
 
-.new_post_btn:active
-{
+.new_post_btn:active {
     border-color: powderblue;
-    background-color: powderblue;   
+    background-color: powderblue;
 }
