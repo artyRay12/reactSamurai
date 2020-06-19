@@ -23,6 +23,11 @@
     color: green;
 }
 
+.messages_wrapper
+{
+    padding: 20px;
+}
+
 .message_add_wrapper
 {
     display: flex;

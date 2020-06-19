@@ -1,16 +1,12 @@
 import React from 'react';
 import './Dialogs.css';
 import { NavLink } from 'react-router-dom';
+import ReduxSendMessageForm from './sendMessageForm';
 
 const Dialogs = (props) => {
-    let newMessage = React.createRef();
 
-    let addMessage = () => {
-        props.addMessage();
-    };
-
-    let updateNewMessageText = () => {
-        props.updateNewMessageText(newMessage.current.value);
+    let addMessage = (formData) => {
+        props.sendMessage(formData.textarea);
     };
 
     const Dialog = (props) => {
@@ -29,6 +25,7 @@ const Dialogs = (props) => {
         return <p className="message">{message}</p>;
     };
 
+    
     let dialogsCreator = props.dialogsData.dialogs.map((userName) => (
         <Dialog name={userName.userName} />
     ));
@@ -46,17 +43,8 @@ const Dialogs = (props) => {
             </div>
             <div className="messages_wrapper">
                 {messagesCreator}
-                <div className="message_add_wrapper">
-                    <textarea
-                        className="message_add_textarea"
-                        onChange={updateNewMessageText}
-                        ref={newMessage}
-                        value={props.dialogsData.newMessageText}></textarea>
-                    <button className="message_add_btn" onClick={addMessage}>
-                        send
-                    </button>
-                </div>
             </div>
+            <ReduxSendMessageForm onSubmit={addMessage} />
         </div>
     );
 };

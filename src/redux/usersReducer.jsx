@@ -1,3 +1,5 @@
+import { userApi } from "../api/api";
+
 let FOLLOW = 'FOLLOW';
 let UNFOLLOW = 'UNFOLLOW';
 let SET_USERS = 'SET-USERS';
@@ -53,7 +55,7 @@ const usersReducer = (state = initialState, action) => {
             return state;
     }
 };
- 
+
 export const follow = (id) => ({
     type: FOLLOW,
     userId: id,
@@ -84,5 +86,14 @@ export const toggleIsFetching = (fetchingState) => ({
     isFetching: fetchingState,
 });
 
+export const getUsersThunkCreator = (currentPage, pageSize) => {
+    return (dispatch) => {
+        dispatch(toggleIsFetching(true));
+        userApi.getUsers(currentPage, pageSize).then((data) => {
+            dispatch(setUsers(data.items));
+            dispatch(toggleIsFetching(false));
+        });
+    };
+};
 
 export default usersReducer;

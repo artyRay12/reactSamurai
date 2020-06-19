@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './Users.module.css';
 import { NavLink } from 'react-router-dom';
-import Axios from 'axios';
-import { followAPI, unfollowAPI } from '../../api/api';
+import { userApi } from '../../api/api';
 
 let Users = (props) => {
     const photoReplacer = (item) => {
@@ -44,7 +43,7 @@ let Users = (props) => {
                         {u.followed ? (
                             <button
                                 onClick={() => {
-                                    unfollowAPI(u.id).then((response) => {
+                                    userApi.unfollow(u.id).then((response) => {
                                         if (response.resultCode === 0) {
                                             props.setUnfollow(u.id);
                                         }
@@ -56,7 +55,7 @@ let Users = (props) => {
                         ) : (
                             <button
                                 onClick={() => {
-                                    followAPI(u.id).then((response) => {
+                                    userApi.follow(u.id).then((response) => {
                                         if (response.resultCode === 0) {
                                             props.setFollow(u.id);
                                         }

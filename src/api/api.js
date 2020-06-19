@@ -14,20 +14,58 @@ export const userApi = {
             .get(`users/?page=${currentPage}&count=${pageSize}`)
             .then((response) => response.data);
     },
+
+    follow(userId) {
+        return instance.post(`follow/${userId}`, {}).then((response) => {
+            return response.data;
+        });
+    },
+
+    unfollow(userId) {
+        return instance.delete(`follow/${userId}`).then((response) => {
+            return response.data;
+        });
+    },
+
+    getProfile(userId) {
+        return instance.get(`profile/${userId}`);
+    },
 };
 
-export const authMe = () => instance.get(`auth/me`, {}).then((response) => response.data);
+export const profileApi = {
+    getStatus(userId) {
+        return instance.get(`/profile/status/${userId}`);
+    },
 
-export const followAPI = (usedId) =>
-    instance.post(`follow/${usedId}`, {}).then((response) => {
-        debugger;
-        return response.data;
-    });
+    updateStatus(status) {
+        return instance.put(`/profile/status`, {
+            status,
+        });
+    },
+};
 
-export const unfollowAPI = (usedId) => {
-    debugger;
-    return instance.delete(`follow/${usedId}`).then((response) => {
-        debugger;
-        return response.data;
-    });
+export const authApi = {
+    authMe() {
+        return instance.get(`auth/me`, {}).then((response) => {
+            return response.data;
+        });
+    },
+
+    login(formData) {
+        return instance
+            .post(
+                `auth/login?email=${formData.login}&password=${formData.password}&rememberMe=${
+                    formData.rememberMe ? 'true' : 'false'
+                }`,
+                {},
+            )
+            .then((response) => {
+                return response.data;
+            });
+    },
+};
+
+export const loginApi = {
+    login: '1',
+    logout: '2',
 };

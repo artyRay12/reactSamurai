@@ -1,0 +1,52 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.input
+{
+    width: 140px;
+    line-height: 20px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    border: 1px solid plum;
+    box-sizing: border-box;
+    
+} 
+
+.input:focus
+{
+    border: 2px solid palevioletred;
+}
+
+.checkbox_wrapper
+{
+    margin-bottom: 10px;
+}
+
+.button
+{
+    width: 140px;
+    line-height: 20px;
+    border: none;
+    background-color: hotpink;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.button:hover
+{
+    background-color: indianred;
+    cursor: pointer;
+}
+
+.checkBox:checked
+{
+    color: hotpink;
+}

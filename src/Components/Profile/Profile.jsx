@@ -10,11 +10,10 @@ const Profile = (props) => {
     return (
         <div>
             <div className="content_wrapper">
-                Начать с 63.5 урока!
                 {!props.profileInfo ? (
                     <Preloader />
                 ) : (
-                    <ProfileInfo profileInfo={props.profileInfo} />
+                    <ProfileInfo profileInfo={props.profileInfo} updateStatus={props.updateStatus} status={props.status}/>
                 )}
                 <MyPostsContainer />
             </div>

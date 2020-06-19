@@ -1,4 +1,5 @@
-import React from 'react';
+import { authApi } from "../api/api";
+
 let SET_USER_DATA = 'SET-USER-DATA';
 
 let initialState = {
@@ -7,7 +8,6 @@ let initialState = {
     login: null,
     isAuth: false,
 };
-
 
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -27,4 +27,23 @@ export const setAuthUserData = (userId, email, login) => ({
     data: { userId, email, login },
 });
 
+export const getAuthUserDataT = () => (dispatch) => {
+    authApi.authMe().then((data) => { 
+        if (data.resultCode === 0) {
+            let {id, email, login} = data.data;
+            dispatch(setAuthUserData(id, email, login));
+        }
+    });
+}
+
+export const loginT = (formData, dispatch) => {
+    
+    authApi.login(formData).then((data) => {
+        if (data.resultCode === 0)
+        {
+            dispatch(getAuthUserDataT());
+        }
+    });
+}
+    
 export default authReducer;

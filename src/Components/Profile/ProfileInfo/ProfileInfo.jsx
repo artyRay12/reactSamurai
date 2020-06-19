@@ -1,23 +1,28 @@
 import React from 'react';
 import './ProfileInfo.css';
+import Status from './Status/Status';
 
 const ProfileInfo = (props) => {
-
     const photoReplacer = (item) => {
         if (item === null) {
             return 'https://rtfm.co.ua/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png';
         }
         return item;
     };
-
     return (
         <div className="profileInfo_wrapper">
             <div className="avatar_wrap">
-                <img src={photoReplacer(props.profileInfo.photos.large)} alt="" className="avatar" />
+                <img
+                    src={photoReplacer(props.profileInfo.photos.large)}
+                    alt=""
+                    className="avatar"
+                />
             </div>
+
             <div className="info_wrap">
                 <span className="user_name">{props.profileInfo.fullName}</span>
-                <p className="status">{props.profileInfo.aboutMe}</p>
+
+                <Status status={props.status} updateStatus={props.updateStatus}/>
 
                 <div class="contact_wrap">
                     <ul class="contact_list">
