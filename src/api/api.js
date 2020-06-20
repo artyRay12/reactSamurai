@@ -54,7 +54,7 @@ export const authApi = {
     login(formData) {
         return instance
             .post(
-                `auth/login?email=${formData.login}&password=${formData.password}&rememberMe=${
+                `auth/login?email=${formData.email}&password=${formData.password}&rememberMe=${
                     formData.rememberMe ? 'true' : 'false'
                 }`,
                 {},
@@ -62,6 +62,12 @@ export const authApi = {
             .then((response) => {
                 return response.data;
             });
+    },
+
+    logout() {
+        return instance.delete(`auth/logout`).then((response) => {
+            return response.data;
+        });
     },
 };
 
