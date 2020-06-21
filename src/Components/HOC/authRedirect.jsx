@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 let mapStateToPropsRedirect = (state) => ({isAuth: state.auth.isAuth});
 
-
 const authRedirect = (Component) => {
     class CauthRedirect extends React.Component {
         render() {
