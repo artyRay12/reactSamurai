@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import styles from './Login.module.css';
 import { connect } from 'react-redux';
 import { loginT } from '../../redux/authReducer';
-import { input, Input } from '../common/forms/textArea';
+import { Input } from '../common/forms/textArea';
 import { minLengthCreator, reqiredFields } from '../../redux/utils/validators/validator';
 
 const minLength = minLengthCreator(6);
